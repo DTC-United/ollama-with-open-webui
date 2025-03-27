@@ -151,9 +151,21 @@ Open another new ps window and type in:
 ````
 pipx install --fetch-missing-python --python 3.11 open-webui
 ````
+If you`re getting an error like:
+
+`
+No executable for the provided Python version '3.11' found in py launcher. Please make sure the provided version is listed when running "py --list".
+`
+  
+Try updating pipx with pip, by using this command:
+
+````
+pip install --upgrade pipx
+````  
+  
 This should work and successfully install open-webui in an isolated virtual environment.
-
-
+  
+  
 
 ## Starting open-webui
 
