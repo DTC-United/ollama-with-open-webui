@@ -1,14 +1,14 @@
-# Ollama mit Open-Webui
+# Ollama with Open-WebUI
 
 # Depencies:
 
 - Python 3.11 / pipx
 - pip
-- scoop
+- scoop/homebrew/apt/etc.
 
   
 
-# Install Ollama:
+# Ollama:
 
 Visit [Ollama](https://ollama.com/) and download the file, fitting your OS (If its down, load the file from this repo).
 
@@ -44,7 +44,7 @@ Use "ollama [command] --help" for more information about a command.
 
 
 
-## Post Install:
+## Post install Steps for ollama:
 
 Run
 ````
@@ -89,9 +89,9 @@ D:\ollama\models
 
 
 
-# Install open-webui
+# Open-WebUI
 
-Get the files here: [open-webui/open-webui](https://github.com/open-webui/open-webui)
+Repo: [open-webui/open-webui](https://github.com/open-webui/open-webui)
 
 There are three options:
 
@@ -142,12 +142,46 @@ Open a new Powershell window and type in:
 ````
 scoop install pipx
 `````
-and 
+
+### For Linux
+
+Use the APT Package Manager in Ubuntu/Debian:
+
+````
+apt install pipx
+````
+
+Use the pacman Package Manager in Arch:
+````
+pacman -Sy install pipx
+````
+
+Use the dnf Package Manager in Fedora:
+````
+dnf install pipx
+````
+### For MacOS
+
+Use the [Homebrew](https://brew.sh/) Package Manager
+````
+brew install pipx
+````
+
+### Generic Setup
+
+Use the pip Package Manager:
+````
+pip install pipx
+````
+
+## Ensure the path of pipx
+Just hit:
 ````
 pipx ensurepath
 ````
+## Installing Open-WebUI
 
-Open another new ps window and type in:
+Open a new ps window and type in:
 ````
 pipx install --fetch-missing-python --python 3.11 open-webui
 ````
@@ -165,7 +199,6 @@ pip install --upgrade pipx
   
 This should work and successfully install open-webui in an isolated virtual environment.
   
-  
 
 ## Starting open-webui
 
@@ -179,12 +212,12 @@ Common Error:
 ````
 [Errno 13] error while attempting to bind on address ('0.0.0.0', 8080): der zugriff auf einen socket war aufgrund der zugriffsrechte des sockets unzulässig
 ````
-This shows, that the port is already in use and can't be blocked by open-webui. You need to kill the programm, thats blocking Port 8080.
+This shows, that the port is already in use and can't be blocked by Open-WebUI. You need to kill the programm, thats blocking Port 8080.
 
 
 # Finishing the Installations
 
-If everything is working, you just need to create an Account (it's local only) and then see a ChatGPT like GUI. 
+If everything is working, you just need to open the localhost adress [Open WebUI GUI](http://localhost:8080/) create an Account (it's local only) and then see a ChatGPT like GUI. 
 
 By clicking at the "Arena Model" at the top of the left, you can choose your preferred LLM, which answers your questions.
 
